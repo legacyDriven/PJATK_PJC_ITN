@@ -62,7 +62,7 @@ void printMinMax(const double* pmn, const double* pmx) {
                << "Max = " << *pmx << std::endl;
 }
 
-int mainRenameToRun() {
+int mainThree() {
     double a, b, c;
     const double *pMin, *pMax;
     a = 2; b = 1; c = 3;

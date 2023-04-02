@@ -9,7 +9,7 @@ void printResult(int minValue, int maxValue, int minCounter, int maxCounter){
     std::cout << "Max = " << maxValue << " " << maxCounter << " razy" << std::endl;
 }
 
-int mainRenameToRun() {
+int mainOne() {
 
     int entry;
     int minValue;
