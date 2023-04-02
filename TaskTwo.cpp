@@ -18,7 +18,7 @@ int sumOfDigits(int entry) {
     return result;
 }
 
-int main() {
+int mainRenameToRun() {
     int number;
     int maxSum = -1;
     int maxNumber;

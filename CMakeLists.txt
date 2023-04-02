@@ -4,7 +4,7 @@ project(Sniezko)
 set(CMAKE_CXX_STANDARD 17)
 #add_executable(Sniezko TaskOne.cpp Sniezko.cpp)
 
-add_executable(Sniezko TaskTwo.cpp Sniezko.cpp)
+add_executable(Sniezko TaskTwo.cpp TaskThree.cpp TaskOne.cpp)
 
 # Macro to define language options
 macro(define_language_option LANG_NAME)
