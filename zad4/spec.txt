@@ -1,0 +1,39 @@
+Data może być scharakteryzowana trzema liczbami oznaczającymi rok, miesiąc i dzień miesiąca.
+Jeśli nie będą nam potrzebne daty z odległej przeszłości, można rok podawać względem roku 2000
+(np. rok 2032 jako 32). Zakładając, że nie będziemy sięgali w przyszłość poza rok 2127, może to być
+liczba z przedziału [0, 127], a do zapisania takich liczb wystarczy nam 7 bitów.
+Do zapisania numeru miesiąca wystarczy 4 bity (bo można na nich zapisać dowolną liczbę
+całkowitą z zakresu [0,15]) a na numer dnia 5 bitów (co odpowiada zakresowi [0,31]).
+Tak więc pełną datę można zapisać na 16 bitach. Zmienne typu int są zwykle 32 bitowe
+(dla bezpieczeństwa można użyć int32_t), czyli można w takiej zmiennej zmieścić dwie daty,
+na przykład początku i końca pewnego okresu.
+
+Napisz
+
+• funkcję, która na podstawie dwóch dat (każda podana za pomocą trzech liczb typu int — rok, miesiąc i dzień)
+tworzy i zwraca jedną wartość typu int z za- kodowanymi tymi dwoma datami;
+
+• funkcję, która na podstawie jednej wartości typu int wypisuje zawarte w niej daty.
+Na przykład następujący program po zdefiniowaniu obu zadeklarowanych funkcji
+
+#include <iostream>
+#include <iomanip> // formatting
+
+void showPeriod(int period);
+int pack(int fromy, int fromm, int fromd,
+         int   toy, int   tom, int   tod);
+int main() {
+Zadanie 4
+// y m d y m d
+        int period = pack(2000, 2, 3, 2127, 11, 29);
+        showPeriod(period);
+
+powinien wypisać
+    2000/02/03-2127/11/29
+(formatowanie może być inne).
+Nie używaj stringów, tablic, bitsetów itd. — tylko operacji bitowych (ORowanie, ANDowanie, przesuwanie. . . ).
+
+Rozwiązania, w postaci jednego pliku źródłowego zawierającego treść programu, proszę wrzucać w systemie EDU do
+katalogu „Foldery zadań / Zadanie_XX”, gdzie ’XX’ jest nu- merem zadania.
+Nazwą pliku powinno być nazwisko z dużej litery (bez polskich znaków); rozszerzeniem musi być ’.cpp’,
+czyli np. Malinowska.cpp.
