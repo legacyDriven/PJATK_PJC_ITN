@@ -21,7 +21,7 @@ Ciąg Collatza, znany też jako ciąg Ulama lub „gradowy” (ang. hailstone),
 to ciąg dla którego pierwszy wyraz a0 jest dodatnią liczbą całkowitą, a kolejne wyrazy są wyliczane ze wzoru
 (an/2 jeśli an jest parzyste, an+1 = 3an + 1 jeśli an jest nieparzyste.
 
-Hipoteza Collatza (wciąż nieudowodniona) mówi, że niezależnie od wartości pierw- szego elementu a0,
+Hipoteza Collatza (wciąż nieudowodniona) mówi, że niezależnie od wartości pierwszego elementu a0,
 po skończonej liczbie kroków ciąg osiągnie wartość 1 (i potem będzie już cyklicznie przybierał wartości 1→4→2→1. . . ).
 Następujacy program, po zdefiniowaniu wszystkich funkcji
 #include <iostream>
