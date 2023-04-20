@@ -5,10 +5,11 @@
 #include <iomanip>
 
 void showPeriod(int period);
+
 int pack(int fromy, int fromm, int fromd,
          int toy, int tom, int tod);
 
-int main() {
+int mainFour() {
     int period = pack(0, 2, 3, 127, 11, 29);
     showPeriod(period);
 
@@ -37,5 +38,6 @@ void showPeriod(int period) {
     int tod = period & 0x1F;
 
     std::cout << 2000 + fromy << "/" << std::setfill('0') << std::setw(2) << fromm << "/" << std::setw(2) << fromd << "-";
+
     std::cout << 2000 + toy << "/" << std::setw(2) << tom << "/" << std::setw(2) << tod << std::endl;
 }
