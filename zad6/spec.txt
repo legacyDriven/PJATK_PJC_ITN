@@ -1,0 +1,53 @@
+Napisz funkcję
+
+bool checkpass(const char* pass);
+
+która pobiera hasło (jako C-napis, czyli tablicę znaków) i sprawdza jego poprawność.
+Przyjmujemy, że poprawne hasło zawiera
+1. co najmniej 8 znaków;
+2. co najmniej 6 znaków różnych;
+3. co najmniej 1 cyfrę;
+4. co najmniej 1 dużą literę;
+5. co najmniej 1 małą literę;
+6. co najmniej 1 znak niealfanumeryczny (nie będący literą ani cyfrą).
+Funkcja zwraca true jeśli hasło jest poprawne, a jeśli nie, to zwraca false,
+ale przedtem wypisuje komunikat o wszystkich przyczynach niepoprawności.
+Można założyć, że znaki są znakami ASCII. [Może być przydatne zdefiniowanie też prostych funkcji pomocniczych.]
+Na przykład program następujący:
+
+#include <iostream>
+// ...
+bool checkpass(const char* pass) { // ...
+}
+
+int main() {
+        using std::cout; using std::endl;
+        const char* passes[] =
+        {
+                "AbcDe93",  "A1b:A1b>",  "Ab:Acb<",
+                "abc123><", "Zorro@123", nullptr
+            };
+            for (int i = 0; passes[i] != nullptr; ++i) {
+            cout << "checking " << passes[i] << endl;
+            if (checkpass(passes[i])) cout << "OK" << endl;
+            cout << endl;
+            }
+            }
+
+powinien wypisać coś w rodzaju:
+
+    checking AbcDe93
+    Too short
+    No non-alphanumeric character
+    checking A1b:A1b>
+    Too few different characters
+    checking Ab:Acb<
+    Too short
+    Too few different characters
+    No digit
+    checking abc123><
+    No uppercase letter
+    checking Zorro@123
+    OK
+Dodatkowe tablice, obiekty typu string, czy kolekcje nie są dozwolone.
+Nie używaj żadnych funkcji bibliotecznych operujących na C-napisach (jak strlen czy isal- pha).
