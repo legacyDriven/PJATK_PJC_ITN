@@ -50,4 +50,4 @@ powinien wypisać coś w rodzaju:
     checking Zorro@123
     OK
 Dodatkowe tablice, obiekty typu string, czy kolekcje nie są dozwolone.
-Nie używaj żadnych funkcji bibliotecznych operujących na C-napisach (jak strlen czy isal- pha).
+Nie używaj żadnych funkcji bibliotecznych operujących na C-napisach (jak strlen czy isalpha).
