@@ -1,0 +1,16 @@
+Zdefiniuj strukturę Point z polami x i y (typu double) odpowiadającymi współrzędnym
+na płaszczyźnie kartezjańskiej. Zdefiniuj też strukturę Rect opisującą prostokąty na płaszczyźnie
+kartezjańskiej z bokami równoległymi do osi; polami tej struktury są dwa punkty będące lewymgórnym
+i prawym-dolnym wierzchołkiem prostokąta.
+Napisz funkcję:
+    std::vector<double> process(const Rect* rects, size_t sz,
+                                std::function<double(Rect)> f);
+
+która pobiera tablicę prostokątów i jej wymiar oraz funkcję typu Rect→double,
+a zwraca wektor wyników przekształcenia kolejnych prostokątów z tablicy dostarczoną funkcją.
+Napisz program testujący napisaną funkcję; jako trzeciego argumentu wywołania użyj zarówno lambd
+jak i wskaźników do własnych funkcji.
+Jako funkcji transformującej możesz, na przykład, użyć funkcji obliczającej pole prostokąta
+albo długość jego przekątnej. Wtedy dla prostokątów
+[(0, 4), (4, 1)], [(−6, 3), (6, −2)], [(−7, 4), (8, −4)],
+wynik powinien być 12, 60, 120 (pola) i 5, 13, 17 (długości przekątnych).
